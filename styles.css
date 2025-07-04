@@ -166,6 +166,7 @@ button:hover {
 #servicios {
   background-color: var(--color-2);
   color: var(--color-texto-oscuro);
+  align-content: center;
 }
 
 #servicios h2 {
@@ -308,6 +309,7 @@ button:hover {
 #nosotros {
   background-color: var(--color-1);
   color: var(--color-texto-claro);
+  align-content: center;
 }
 
 #nosotros h2 {
@@ -342,7 +344,7 @@ footer {
   text-align: center;
 }
 
-.footer-joke {
+.footer {
   color: var(--color-3);
   font-style: italic;
   margin-top: 10px;
@@ -403,51 +405,191 @@ footer {
   }
 }
 
-/* MEDIA QUERIES BÁSICAS */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-  /* Header responsivo */
+  /* Header */
   #main-header {
     flex-direction: column;
     padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   .logo {
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .main-nav ul {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
   }
 
   .main-nav ul li {
     margin: 5px;
   }
 
-  /* Hero responsivo */
+  .main-nav ul li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  /* Hero */
+  #hero {
+    padding-top: 120px;
+    height: 100vh;
+  }
+
   .hero-content {
-    padding: 15px;
-    max-width: 90%;
+    padding: 20px;
+    max-width: 95%;
+    margin: 0 auto;
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
   }
 
-  .slogan {
-    font-size: 1.5rem;
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-content button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  #hero-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Secciones generales */
+  section {
+    padding: 60px 15px;
   }
 
   #servicios h2,
   #precios h2,
   #nosotros h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Servicios */
+  .servicios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio {
+    min-width: 100%;
+    max-width: 350px;
+    margin: 15px 0;
+    padding: 25px;
+  }
+
+  .servicio-icon {
+    font-size: 3rem;
+  }
+
+  .servicio h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Precios */
+  .precios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .precio-plan {
+    min-width: 100%;
+    max-width: 350px;
+    margin: 15px 0;
+    padding: 25px;
+  }
+
+  .precio-plan h3 {
+    font-size: 1.5rem;
+  }
+
+  .precio {
     font-size: 2.5rem;
   }
 
-  .servicio,
-  .precio-plan {
-    min-width: 100%;
-    margin: 20px 0;
+  .precio-plan ul li {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .precio-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  /* Sobre nosotros */
+  .nosotros-content {
+    padding: 20px;
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+/* Media query mobile */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  #servicios h2,
+  #precios h2,
+  #nosotros h2 {
+    font-size: 1.8rem;
+  }
+
+  .servicio h3,
+  .precio-plan h3 {
+    font-size: 1.3rem;
+  }
+
+  .precio {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .main-nav ul li a {
+    font-size: 0.8rem;
+    padding: 5px 8px;
   }
 }
